@@ -1,0 +1,21 @@
+<h1>Nuevo Post</h1>
+
+<%= form_with(model: @post, id: 'create_post', local: true) do |f| %>
+
+    <div>
+        <%= f.label :titulo %>
+        <%= f.text_field :title %>
+    </div>
+    <div>
+        <%= f.label :contenido %>
+        <%= f.text_area :content %>
+    </div>
+    <div>
+        <%= f.label 'url imagen' %>
+        <%= f.text_field :img_url %>
+    </div>
+    <div>
+        <%= f.submit %>
+    </div>
+
+<% end %>
